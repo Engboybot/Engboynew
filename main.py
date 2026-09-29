@@ -23,6 +23,19 @@ import uuid
 import random
 import string
 import hashlib
+import os
+from pyromod import Client
+
+# Koyeb के Environment variables से वैल्यूज को रीड करना
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
+
+app = Client(
+    "my_bot",
+    api_id=API_ID,
+    api_hash=API_HASH
+)
+
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import FloodWait
