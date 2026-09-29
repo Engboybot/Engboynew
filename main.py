@@ -3,6 +3,11 @@ import asyncio
 import aiohttp
 import json
 import zipfile
+import asyncio
+import nest_asyncio
+
+nest_asyncio.apply()
+
 from typing import Dict, List, Any, Tuple
 from collections import defaultdict
 from base64 import b64encode, b64decode
