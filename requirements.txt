@@ -1,10 +1,7 @@
 pyrogram==2.0.106
-PyWinCtl==0.3
 tgcrypto
 requests
 pyromod==3.1.6
-ffmpeg
-mediainfo
 cloudscraper
 beautifulsoup4==4.12.2
 bs4==0.0.2
