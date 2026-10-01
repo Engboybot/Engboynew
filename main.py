@@ -4,6 +4,20 @@ import aiohttp
 import json
 import zipfile
 import asyncio
+import os
+from threading import Thread
+from flask import Flask
+
+web_app = Flask(__name__)
+
+@web_app.route("/")
+def home():
+    return "Bot is running"
+
+Thread(
+    target=lambda: web_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000))),
+    daemon=True
+).start()
 from typing import Dict, List, Any, Tuple
 from collections import defaultdict
 from base64 import b64encode, b64decode
